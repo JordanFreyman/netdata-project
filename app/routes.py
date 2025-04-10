@@ -1,11 +1,21 @@
 """
 Main application routes.
 """
-from flask import Blueprint, render_template, request, flash
-from flask_login import login_required
+from functools import wraps
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask_login import login_required, current_user
 from .models import User, db
 
 main_bp = Blueprint('main', __name__)
+
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not current_user.is_authenticated or current_user.type != 'Admin':
+            flash("Admins only!", "danger")
+            return redirect(url_for('main.unauthorized'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @main_bp.route('/')
 def index():
@@ -24,6 +34,7 @@ def unauthorized():
     return render_template('unauthorized.html')
 
 @main_bp.route('/manage_users', methods=['GET', 'POST'])
+@admin_required
 @login_required
 def manage_users():
     """Manage user roles."""
