@@ -10,25 +10,15 @@ const charts = {};
 function createOrUpdateChart(id, data, label) {
     const labels = data.map(point => new Date(point.timestamp).toLocaleTimeString());
     const values = data.map(point => point.value);
-    const hasData = values.some(val => val !== null && val !== undefined);
+    const canvas = document.getElementById(id);
 
-    const chartEl = document.getElementById(id);
-    const chartContainer = chartEl.parentElement;
-    chartContainer.querySelectorAll("p.no-data-msg").forEach(el => el.remove());
-    
-    if (!hasData) {
-        const msg = document.createElement("p");
-        msg.textContent = "No data available for this machine.";
-        msg.className = "no-data-msg";
-        msg.style.color = "gray";
-        msg.style.textAlign = "center";
-        chartContainer.appendChild(msg);
+    if (!canvas) {
+        console.error(`Canvas element with ID '${id}' not found.`);
         return;
     }
 
-    const ctx = chartE1.getContext('2d');
+    const ctx = canvas.getContext('2d');
 
-    
     if (charts[id]) {
         charts[id].data.labels = labels;
         charts[id].data.datasets[0].data = values;

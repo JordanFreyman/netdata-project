@@ -73,3 +73,183 @@ Network: Retrieved 60 points, avg=-2.022332255
 66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9277733f00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
 66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f92777d0160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
 66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f92777d0380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+[2025-04-13 20:20:02.543761] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=5.794963103333333
+Memory: Retrieved 60 points, avg=944.2070418333333
+Disk: Retrieved 60 points, avg=23.94768115
+Network: Retrieved 60 points, avg=-7.258393119999999
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc0bbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431dd8d1d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc22cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23460>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23680>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc238a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23ac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23ce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431ddc23f00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431dd95c160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7431dd95c380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+[2025-04-13 20:30:04.460682] Logging system metrics...
+
+--- 127.0.0.1 ---
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d7ff6f0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d4c5010>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d816e00>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d816690>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d816360>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d816140>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d8178a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d817ac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d817ce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d817f00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d54c160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d54c380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d54c5a0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d54c7c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d817f00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5f9d817df0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+[2025-04-13 20:40:03.094513] Logging system metrics...
+
+--- 127.0.0.1 ---
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d036f0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea929c9010>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d16e00>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d16690>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d16360>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d16140>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d178a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d17ac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d17ce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d17f00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92a50160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92a50380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92a505a0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92a507c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d17f00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x71ea92d17df0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+[2025-04-13 20:50:02.168339] Logging system metrics...
+
+--- 127.0.0.1 ---
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb50f6f0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb341010>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32ee00>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32e690>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32e360>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32e140>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32f8a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32fac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32fce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32ff00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb3d0160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb3d0380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb3d05a0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb3d07c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32ff00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aaafb32fdf0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+[2025-04-13 21:00:03.449883] Logging system metrics...
+
+--- 127.0.0.1 ---
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+127.0.0.1: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af701f76f0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af70221010>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020ae00>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020a690>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020a360>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020a140>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020b8a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020bac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020bce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020bf00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af6ff4c160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af6ff4c380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af6ff4c5a0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af6ff4c7c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020bf00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x77af7020bdf0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+[2025-04-13 21:10:02.437699] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=5.687810086666667
+Memory: Retrieved 60 points, avg=944.2070396
+Disk: Retrieved 60 points, avg=23.94768118333333
+Network: Retrieved 60 points, avg=-65.50028685333334
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240645ffbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240642c5d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064612cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613460>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613680>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240646138a0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+173.255.230.24: Error fetching data: HTTPConnectionPool(host='173.255.230.24', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613ac0>, 'Connection to 173.255.230.24 timed out. (connect timeout=5)'))
+
+--- 66.228.34.180 ---
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613ce0>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064613f00>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064348160>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+66.228.34.180: Error fetching data: HTTPConnectionPool(host='66.228.34.180', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064348380>, 'Connection to 66.228.34.180 timed out. (connect timeout=5)'))
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240643485a0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240643487c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240643489e0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064348c00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
