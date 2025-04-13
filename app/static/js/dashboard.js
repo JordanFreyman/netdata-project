@@ -1,54 +1,64 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var pieCtx = document.getElementById('pieChart').getContext('2d');
-    var barCtx = document.getElementById('barChart').getContext('2d');
-    var histCtx = document.getElementById('histogramChart').getContext('2d');
-    var lineCtx = document.getElementById('lineChart').getContext('2d');
+const chartConfigs = [
+    { id: 'cpuChart', endpoint: '/api/metrics/cpu', label: 'CPU Usage' },
+    { id: 'memoryChart', endpoint: '/api/metrics/memory', label: 'Memory Usage' },
+    { id: 'diskChart', endpoint: '/api/metrics/disk', label: 'Disk Usage' },
+    { id: 'networkChart', endpoint: '/api/metrics/network', label: 'Network Usage' }
+];
 
-    new Chart(pieCtx, {
-        type: 'pie',
-        data: {
-            labels: ['Electronics', 'Clothing', 'Grocery', 'Home Decor'],
-            datasets: [{
-                data: [30, 25, 20, 25],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50']
-            }]
-        }
-    });
+const charts = {};
 
-    new Chart(barCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-            datasets: [{
-                label: 'Revenue ($)',
-                data: [5000, 7000, 8000, 6000, 9000],
-                backgroundColor: '#36A2EB'
-            }]
-        }
-    });
+function createOrUpdateChart(id, data, label) {
+    const labels = data.map(point => new Date(point.timestamp).toLocaleTimeString());
+    const values = data.map(point => point.value);
+    const ctx = document.getElementById(id).getContext('2d');
 
-    new Chart(histCtx, {
-        type: 'bar',
-        data: {
-            labels: ['0-10', '10-20', '20-30', '30-40', '40+'],
-            datasets: [{
-                label: 'Orders',
-                data: [15, 25, 30, 20, 10],
-                backgroundColor: '#FFCE56'
-            }]
-        }
-    });
+    if (charts[id]) {
+        charts[id].data.labels = labels;
+        charts[id].data.datasets[0].data = values;
+        charts[id].update();
+    } else {
+        charts[id] = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: label,
+                    data: values,
+                    borderWidth: 2,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    tension: 0.3,
+                    fill: true,
+                    spanGaps: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+}
 
-    new Chart(lineCtx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-            datasets: [{
-                label: 'Customers',
-                data: [100, 200, 300, 400, 500],
-                borderColor: '#FF6384',
-                fill: false
-            }]
-        }
+function fetchAndUpdateCharts() {
+    chartConfigs.forEach(({ id, endpoint, label }) => {
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => {
+                createOrUpdateChart(id, data, label);
+            })
+            .catch(error => {
+                console.error(`Error loading ${label}:`, error);
+            });
     });
-});
+}
+
+fetchAndUpdateCharts();
+
+setInterval(fetchAndUpdateCharts, 60 * 1000);

@@ -2,26 +2,35 @@
 {% block content %}
 <div class="dashboard-container">
     <h1 class="dashboard-title">Dashboard Overview</h1>
-    
-    <div class="charts-container">
-        <div class="chart-card">
-            <h3>Sales Distribution</h3>
-            <canvas id="pieChart"></canvas>
-        </div>
-        <div class="chart-card">
-            <h3>Monthly Revenue</h3>
-            <canvas id="barChart"></canvas>
-        </div>
-        <div class="chart-card">
-            <h3>Frequency of Orders</h3>
-            <canvas id="histogramChart"></canvas>
-        </div>
-        <div class="chart-card">
-            <h3>Customer Growth</h3>
-            <canvas id="lineChart"></canvas>
-        </div>
+<div class="charts-container">
+    <div class="chart-card">
+        <h3>CPU Usage</h3>
+  <div class="chart-wrapper">
+    <canvas id="cpuChart"></canvas>
+  </div>
     </div>
+    <div class="chart-card">
+        <h3>Memory Usage</h3>
+  <div class="chart-wrapper">
+    <canvas id="memoryChart"></canvas>
+  </div>
+    </div>
+    <div class="chart-card">
+        <h3>Disk Usage</h3>
+  <div class="chart-wrapper">
+    <canvas id="diskChart"></canvas>
+  </div>
+    </div>
+    <div class="chart-card">
+        <h3>Network Usage</h3>
+  <div class="chart-wrapper">
+    <canvas id="networkChart"></canvas>
+  </div>
+    </div>
+</div>
+    
 </div>
 
 <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/chart.js') }}"></script>
 {% endblock %}

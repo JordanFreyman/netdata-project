@@ -1,10 +1,8 @@
-"""
-Main application routes.
-"""
 from functools import wraps
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required, current_user
-from .models import User, db
+from sqlalchemy import desc
+from .models import User, db, MetricLogs
 
 main_bp = Blueprint('main', __name__)
 
@@ -19,25 +17,21 @@ def admin_required(f):
 
 @main_bp.route('/')
 def index():
-    """Render the login page."""
     return render_template('login.html')
 
 @main_bp.route('/dashboard')
 @login_required
 def dashboard():
-    """Render the dashboard page."""
     return render_template('dashboard.html')
 
 @main_bp.route('/unauthorized')
 def unauthorized():
-    """Render the unauthorized access page."""
     return render_template('unauthorized.html')
 
 @main_bp.route('/manage_users', methods=['GET', 'POST'])
 @admin_required
 @login_required
 def manage_users():
-    """Manage user roles."""
     if request.method == 'POST':
         email = request.form.get('email')
         user_type = request.form.get('user_type', 'User')
@@ -52,3 +46,29 @@ def manage_users():
             flash('User updated successfully.', 'success')
     users = User.query.all()
     return render_template('manage_users.html', users=users)
+
+@main_bp.route('/api/metrics/<string:metric_type>')
+@login_required
+def get_metric_data(metric_type):
+    if metric_type not in ['cpu', 'memory', 'disk', 'network']:
+        return jsonify({"error": "Invalid metric type"}), 400
+
+    metric_field = {
+        'cpu': MetricLogs.cpu_usage,
+        'memory': MetricLogs.memory_usage,
+        'disk': MetricLogs.disk_usage,
+        'network': MetricLogs.network_usage
+    }[metric_type]
+
+    logs = MetricLogs.query.order_by(desc(MetricLogs.timestamp)).limit(300).all()
+
+    data = [
+        {
+            "timestamp": log.timestamp.isoformat(),
+            "value": getattr(log, f"{metric_type}_usage"),
+            "machine": log.machine_name
+        }
+        for log in logs
+    ]
+
+    return jsonify(data)
