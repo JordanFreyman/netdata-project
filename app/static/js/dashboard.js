@@ -7,15 +7,52 @@ const chartConfigs = [
 
 const charts = {};
 
-function createOrUpdateChart(id, data, label) {
-    const labels = data.map(point => new Date(point.timestamp).toLocaleTimeString());
-    const values = data.map(point => point.value);
+function createOrUpdateChart(id, groupedData, label) {
+    const container = document.getElementById(id)?.parentElement;
     const canvas = document.getElementById(id);
 
-    if (!canvas) {
-        console.error(`Canvas element with ID '${id}' not found.`);
+    if (!canvas || !container) {
+        console.error(`Canvas or container not found for chart ID: ${id}`);
         return;
     }
+
+    const validPoints = [];
+    for (const machine in groupedData) {
+        if (machine === "127.0.0.1") { // Only use your local machine for now
+            for (const point of groupedData[machine]) {
+                if (point.value !== null) {
+                    validPoints.push(point);
+                }
+            }
+        }
+    }
+
+    if (validPoints.length === 0){
+        canvas.style.display = 'none';
+        if (!container.querySelector('.fallback-message')) {
+            const fallback = document.createElement('p');
+            fallback.textContent = `No data available for ${label}.`;
+            fallback.style.color = 'red';
+            fallback.classList.add('fallback-message');
+            container.appendChild(fallback);
+        }
+        return;
+}
+
+
+    canvas.style.display = 'block';
+    const oldFallback = container.querySelector('.fallback-message');
+    if (oldFallback) oldFallback.remove();
+
+    const values = validPoints.map(p => p.value);
+
+    const range = document.getElementById('rangeSelect')?.value || '1h';
+    const labels = validPoints.map(p => {
+        const date = new Date(p.timestamp);
+        return range === '7d'
+            ? date.toLocaleString()
+            : date.toLocaleTimeString();
+    });
 
     const ctx = canvas.getContext('2d');
 
@@ -54,8 +91,10 @@ function createOrUpdateChart(id, data, label) {
 }
 
 function fetchAndUpdateCharts() {
+    const selectedRange = document.getElementById('rangeSelect')?.value || '1h';
+
     chartConfigs.forEach(({ id, endpoint, label }) => {
-        fetch(endpoint)
+        fetch(`${endpoint}?range=${selectedRange}`)
             .then(response => response.json())
             .then(data => {
                 createOrUpdateChart(id, data, label);
@@ -69,3 +108,4 @@ function fetchAndUpdateCharts() {
 fetchAndUpdateCharts();
 
 setInterval(fetchAndUpdateCharts, 60 * 1000);
+document.getElementById('rangeSelect')?.addEventListener('change', fetchAndUpdateCharts);
