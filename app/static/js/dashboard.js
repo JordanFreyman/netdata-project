@@ -8,9 +8,8 @@ const chartConfigs = [
 const charts = {};
 
 function createOrUpdateMachineCharts(machine, metrics, range) {
-    // Check if the machine has at least one non-null metric data point
     const hasValidData = Object.values(metrics).some(metricData =>
-        Array.isArray(metricData) && metricData.some(p => p.value !== null)
+        Array.isArray(metricData) && metricData.length > 0 && metricData.some(p => p.value !== null)
     );
 
     if (!hasValidData) {
@@ -43,16 +42,16 @@ function createOrUpdateMachineCharts(machine, metrics, range) {
     }
 
     chartConfigs.forEach(({ key, label }) => {
-        const data = metrics[key] || [];
+        const data = Array.isArray(metrics[key]) ? metrics[key].filter(p => p.value !== null) : [];
         const canvas = document.getElementById(`${key}Chart-${machine}`);
         const ctx = canvas.getContext('2d');
 
-        const validPoints = data.filter(p => p.value !== null);
-        const labels = validPoints.map(p => {
+        const labels = data.map(p => {
             const date = new Date(p.timestamp);
             return range === '7d' ? date.toLocaleString() : date.toLocaleTimeString();
         });
-        const values = validPoints.map(p => p.value);
+
+        const values = data.map(p => p.value);
 
         if (charts[`${key}-${machine}`]) {
             charts[`${key}-${machine}`].data.labels = labels;
@@ -87,23 +86,29 @@ function createOrUpdateMachineCharts(machine, metrics, range) {
 
 function fetchAndUpdateCharts() {
     const selectedRange = document.getElementById('rangeSelect')?.value || '1h';
-    const container = document.getElementById('chartsContainer');
+    const container = document.querySelector('.charts-container');
     if (!container) return;
 
     container.innerHTML = '';
     Object.keys(charts).forEach(k => delete charts[k]);
 
-    const allData = {}; // ← group by machine and metric
-
+    const allData = {};
     let completed = 0;
 
     chartConfigs.forEach(({ key }) => {
         fetch(`/api/metrics/${key}?range=${selectedRange}`)
             .then(response => response.json())
             .then(data => {
-                for (const machine in data) {
+                // ✅ Skip if the response is not an object (e.g., if it's an array or invalid)
+                if (typeof data !== 'object' || Array.isArray(data)) {
+                    console.error(`Invalid data structure for ${key}:`, data);
+                    return;
+                }
+
+                // Merge the data into allData
+                for (const machine of Object.keys(data)) {
                     if (!allData[machine]) allData[machine] = {};
-                    allData[machine][key] = data[machine]; // ✅ assign correct metric
+                    allData[machine][key] = data[machine];
                 }
 
                 completed++;
@@ -118,6 +123,10 @@ function fetchAndUpdateCharts() {
             });
     });
 }
+
+window.addEventListener('error', function(e) {
+    console.error("JS error detected:", e.message, "at", e.filename, ":", e.lineno);
+});
 
 fetchAndUpdateCharts();
 setInterval(fetchAndUpdateCharts, 60 * 1000);

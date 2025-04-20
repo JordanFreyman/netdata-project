@@ -2,35 +2,20 @@
 {% block content %}
 <div class="dashboard-container">
     <h1 class="dashboard-title">Dashboard Overview</h1>
-<div class="charts-container">
-    <div class="chart-card">
-        <h3>CPU Usage</h3>
-  <div class="chart-wrapper">
-    <canvas id="cpuChart"></canvas>
-  </div>
-    </div>
-    <div class="chart-card">
-        <h3>Memory Usage</h3>
-  <div class="chart-wrapper">
-    <canvas id="memoryChart"></canvas>
-  </div>
-    </div>
-    <div class="chart-card">
-        <h3>Disk Usage</h3>
-  <div class="chart-wrapper">
-    <canvas id="diskChart"></canvas>
-  </div>
-    </div>
-    <div class="chart-card">
-        <h3>Network Usage</h3>
-  <div class="chart-wrapper">
-    <canvas id="networkChart"></canvas>
-  </div>
-    </div>
-</div>
-    
+<div style="margin-bottom: 1rem;">
+  <label for="rangeSelect">Select time range: </label>
+  <select id="rangeSelect">
+      <option value="1h">Last 1 Hour</option>
+      <option value="24h">Last 24 Hours</option>
+      <option value="7d">Last 7 Days</option>
+  </select>
 </div>
 
-<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
-<script src="{{ url_for('static', filename='vendor/chart.js') }}"></script>
+<div id="chartsContainer" class="charts-container">
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}?v=1"></script>
+<script src="{{ url_for('static', filename='vendor/chart.js') }}?v=1"></script>
+
 {% endblock %}

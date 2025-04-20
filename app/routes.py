@@ -50,6 +50,9 @@ def manage_users():
 @main_bp.route('/api/metrics/<string:metric_type>')
 @login_required
 def get_metric_data(metric_type):
+    from datetime import datetime, timedelta
+    from flask import request
+
     if metric_type not in ['cpu', 'memory', 'disk', 'network']:
         return jsonify({"error": "Invalid metric type"}), 400
 
@@ -60,15 +63,26 @@ def get_metric_data(metric_type):
         'network': MetricLogs.network_usage
     }[metric_type]
 
-    logs = MetricLogs.query.order_by(desc(MetricLogs.timestamp)).limit(300).all()
+    range_param = request.args.get('range', '1h')
+    now = datetime.utcnow()
 
-    data = [
-        {
+    if range_param == '1h':
+        start_time = now - timedelta(hours=1)
+    elif range_param == '24h':
+        start_time = now - timedelta(hours=24)
+    elif range_param == '7d':
+        start_time = now - timedelta(days=7)
+    else:
+        start_time = now - timedelta(hours=1)
+
+    logs = MetricLogs.query.filter(MetricLogs.timestamp >= start_time).order_by(MetricLogs.timestamp.asc()).all()
+
+    grouped_data = {}
+    for log in logs:
+        machine = log.machine_name
+        grouped_data.setdefault(machine, []).append({
             "timestamp": log.timestamp.isoformat(),
-            "value": getattr(log, f"{metric_type}_usage"),
-            "machine": log.machine_name
-        }
-        for log in logs
-    ]
+            "value": getattr(log, f"{metric_type}_usage")
+        })
 
-    return jsonify(data)
+    return jsonify(grouped_data)
