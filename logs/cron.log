@@ -687,3 +687,86 @@ Network: Retrieved 60 points, avg=-0.40388971166666665
 66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 22:20:02.276870] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=27.85433989
+Memory: Retrieved 60 points, avg=944.2070005833334
+Disk: Retrieved 60 points, avg=23.947681333333332
+Network: Retrieved 60 points, avg=46.51581712833333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x70f034503ce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x70f034341eb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x70f034526be0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x70f034527130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.12002137
+Memory: Retrieved 60 points, avg=961.6132886666667
+Disk: Retrieved 60 points, avg=23.947681483333334
+Network: Retrieved 60 points, avg=-0.937664655
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.6982994966666665
+Memory: Retrieved 60 points, avg=961.6132776666667
+Disk: Retrieved 60 points, avg=23.947681250000002
+Network: Retrieved 60 points, avg=-1.1003460883333331
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Traceback (most recent call last):
+  File "/root/cop4521-flask/log_metrics.py", line 5, in <module>
+    from app import create_app
+  File "/root/lynis/cop4521-flask/app/__init__.py", line 9, in <module>
+    from .models import db, User
+  File "/root/lynis/cop4521-flask/app/models.py", line 29, in <module>
+    class MetricLogs(db.Model):
+    ...<7 lines>...
+        network_usage = db.Column(db.Float, nullable=True)
+  File "/root/lynis/cop4521-flask/app/models.py", line 32, in MetricLogs
+    timestamp = db.Column(db.DateTime(timezone=True), server_default=func.now, nullable=False)
+  File "/root/cop4521-flask/venv/lib/python3.13/site-packages/sqlalchemy/sql/schema.py", line 2153, in __init__
+    server_default = DefaultClause(server_default)
+  File "/root/cop4521-flask/venv/lib/python3.13/site-packages/sqlalchemy/sql/schema.py", line 4077, in __init__
+    util.assert_arg_type(arg, (str, ClauseElement, TextClause), "arg")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/cop4521-flask/venv/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 1478, in assert_arg_type
+    raise exc.ArgumentError(
+    ...<2 lines>...
+    )
+sqlalchemy.exc.ArgumentError: Argument 'arg' is expected to be one of type '<class 'str'>' or '<class 'sqlalchemy.sql.elements.ClauseElement'>' or '<class 'sqlalchemy.sql.elements.TextClause'>', got '<class 'sqlalchemy.sql.functions._FunctionGenerator'>'
+[2025-04-20 22:40:02.140829] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=5.020796883333333
+Memory: Retrieved 60 points, avg=944.20705525
+Disk: Retrieved 60 points, avg=23.947681133333333
+Network: Retrieved 60 points, avg=-2.9512414483333336
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching cpu data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x733b92dffce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching memory data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x733b92ad5fd0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching disk data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x733b92e26ad0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching network data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x733b92e27240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=6.968447103333333
+Memory: Retrieved 60 points, avg=961.6132586666666
+Disk: Retrieved 60 points, avg=23.947681349999996
+Network: Retrieved 60 points, avg=0.8001673199999999
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.6524037566666663
+Memory: Retrieved 60 points, avg=961.613312
+Disk: Retrieved 60 points, avg=23.947681566666667
+Network: Retrieved 60 points, avg=-0.6296792950000001
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching cpu data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching memory data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching disk data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching network data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))

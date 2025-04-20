@@ -11,19 +11,21 @@ auth_bp = Blueprint('auth', __name__)
 def login():
     """Redirect user to Google OAuth login."""
     redirect_uri = url_for('auth.callback', _external=True)
-    return current_app.extensions['authlib.integrations.flask_client'].google.authorize_redirect(redirect_uri)
+    google = current_app.extensions['authlib.integrations.flask_client'].google
+    return google.authorize_redirect(redirect_uri)
 
 @auth_bp.route('/callback')
 def callback():
     """Handle OAuth callback and log in the user."""
-    token = current_app.extensions['authlib.integrations.flask_client'].google.authorize_access_token()
+    google = current_app.extensions['authlib.integrations.flask_client'].google
+    token = google.authorize_access_token()
     user_info = token.get('userinfo')
     email = user_info['email']
-    
+
     user = User.query.filter_by(email=email).first()
     if not user:
         return redirect(url_for('main.unauthorized'))
-    
+
     login_user(user)
     return redirect(url_for('main.dashboard'))
 

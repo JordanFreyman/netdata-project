@@ -1,11 +1,11 @@
-"""
-Initialize the Flask application, configure extensions, and register blueprints.
-"""
+"""Initialize the Flask application, configure extensions, and register blueprints."""
+
 from flask import Flask
-from config import Config
 from flask_login import LoginManager
-from authlib.integrations.flask_client import OAuth
 from flask_migrate import Migrate
+from authlib.integrations.flask_client import OAuth
+
+from config import Config
 from .models import db, User
 from .routes import main_bp
 from .auth import auth_bp
@@ -15,10 +15,12 @@ migrate = Migrate()
 login_manager = LoginManager()
 oauth = OAuth()
 
+
 @login_manager.user_loader
 def load_user(user_id):
     """Load user by ID."""
     return db.session.get(User, int(user_id))
+
 
 def create_app(config_override=None):
     """Create and configure the Flask app."""
@@ -26,7 +28,7 @@ def create_app(config_override=None):
     app.config.from_object(Config)
 
     if config_override:
-        app.config.update(config_override) 
+        app.config.update(config_override)
 
     login_manager.init_app(app)
     oauth.init_app(app)
