@@ -253,3 +253,437 @@ Network: Retrieved 60 points, avg=-65.50028685333334
 66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240643487c0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
 66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7240643489e0>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
 66.175.210.204: Error fetching data: HTTPConnectionPool(host='66.175.210.204', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x724064348c00>, 'Connection to 66.175.210.204 timed out. (connect timeout=5)'))
+[2025-04-20 20:00:01.875428] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=10.923585996666667
+Memory: Retrieved 60 points, avg=944.2070111666667
+Disk: Retrieved 60 points, avg=23.94768153333333
+Network: Retrieved 60 points, avg=-57.50927286
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b574c1f7bb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b574c221d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b574c20acf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b574c20b240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.043819263333333
+Memory: Retrieved 60 points, avg=961.6132751666667
+Disk: Retrieved 60 points, avg=23.94768118333333
+Network: Retrieved 60 points, avg=-2.20623812
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=34.12227866
+Memory: Retrieved 60 points, avg=961.613307
+Disk: Retrieved 60 points, avg=23.947681233333334
+Network: Retrieved 60 points, avg=-0.49207238
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 20:10:01.827336] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.424718753333334
+Memory: Retrieved 60 points, avg=944.2070333333334
+Disk: Retrieved 60 points, avg=23.947681316666664
+Network: Retrieved 60 points, avg=-28.108874518333334
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x734fd1bf7bb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x734fd1c21d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x734fd1c0ecf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x734fd1c0f240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.117583473333334
+Memory: Retrieved 60 points, avg=961.6132861666666
+Disk: Retrieved 60 points, avg=23.947681149999998
+Network: Retrieved 60 points, avg=-2.0743999233333335
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.8438608466666664
+Memory: Retrieved 60 points, avg=961.6132931666667
+Disk: Retrieved 60 points, avg=23.947681233333334
+Network: Retrieved 60 points, avg=-2.861288775
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 20:20:01.815575] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.4354285566666665
+Memory: Retrieved 60 points, avg=944.2070206666667
+Disk: Retrieved 60 points, avg=23.94768111666667
+Network: Retrieved 60 points, avg=-20.13679880833333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7726ff7f7bb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7726ff825d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7726ff80ecf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7726ff80f240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.148549093333333
+Memory: Retrieved 60 points, avg=961.6132741666667
+Disk: Retrieved 60 points, avg=23.94768135
+Network: Retrieved 60 points, avg=-1.30552931
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.7395612199999997
+Memory: Retrieved 60 points, avg=961.6132388333334
+Disk: Retrieved 60 points, avg=23.947681866666667
+Network: Retrieved 60 points, avg=-0.8407974616666667
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 20:30:01.958576] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=10.229060586666666
+Memory: Retrieved 60 points, avg=944.2070435
+Disk: Retrieved 60 points, avg=23.947681233333334
+Network: Retrieved 60 points, avg=-67.76207543833333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7a4cff5f7bb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7a4cff625d90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7a4cff612cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7a4cff613240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.229794
+Memory: Retrieved 60 points, avg=961.6132898333333
+Disk: Retrieved 60 points, avg=23.94768171666667
+Network: Retrieved 60 points, avg=-1.6754665083333333
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.81442612
+Memory: Retrieved 60 points, avg=961.6132646666666
+Disk: Retrieved 60 points, avg=23.947681316666664
+Network: Retrieved 60 points, avg=-1.0121878516666667
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 20:40:02.084074] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=6.267139726666667
+Memory: Retrieved 60 points, avg=944.2070160000001
+Disk: Retrieved 60 points, avg=23.947681316666667
+Network: Retrieved 60 points, avg=-339.33152170666665
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ea2546fbbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ea2543c5c70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ea254712cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7ea254713240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.324309783333333
+Memory: Retrieved 60 points, avg=961.613287
+Disk: Retrieved 60 points, avg=23.947681250000002
+Network: Retrieved 60 points, avg=-0.790666615
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.73225822
+Memory: Retrieved 60 points, avg=961.6132738333333
+Disk: Retrieved 60 points, avg=23.9476809
+Network: Retrieved 60 points, avg=-0.7978126333333333
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 20:50:02.325620] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.4915766433333335
+Memory: Retrieved 60 points, avg=944.2070293166666
+Disk: Retrieved 60 points, avg=23.947681166666666
+Network: Retrieved 60 points, avg=-6.0270605066666665
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c3aab0fbbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c3aaadc5c70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c3aab112cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c3aab113240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.0355171766666675
+Memory: Retrieved 60 points, avg=961.6132766666667
+Disk: Retrieved 60 points, avg=23.94768115
+Network: Retrieved 60 points, avg=-0.9217333983333335
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.8313281466666664
+Memory: Retrieved 60 points, avg=961.6132781666668
+Disk: Retrieved 60 points, avg=23.947681366666664
+Network: Retrieved 60 points, avg=-0.7401138799999999
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:00:02.223093] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.16628273
+Memory: Retrieved 60 points, avg=944.2070656
+Disk: Retrieved 60 points, avg=23.947681733333333
+Network: Retrieved 60 points, avg=0.0928
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7495f4b03bb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7495f47cdc70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7495f4b1acf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7495f4b1b240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.128686773333333
+Memory: Retrieved 60 points, avg=961.613292
+Disk: Retrieved 60 points, avg=23.9476809
+Network: Retrieved 60 points, avg=-0.6772052883333333
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=36.171736730000006
+Memory: Retrieved 60 points, avg=961.6133143333334
+Disk: Retrieved 60 points, avg=23.947681516666666
+Network: Retrieved 60 points, avg=-0.94586666
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:10:03.618918] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=8.858121383333334
+Memory: Retrieved 60 points, avg=944.2070237833334
+Disk: Retrieved 60 points, avg=23.947681366666664
+Network: Retrieved 60 points, avg=91.39676234500001
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aac5610fbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aac55f3dc70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aac56126cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7aac56127240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=6.835708336666666
+Memory: Retrieved 60 points, avg=961.6132856666667
+Disk: Retrieved 60 points, avg=23.947681466666666
+Network: Retrieved 60 points, avg=-0.8481333883333334
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.82807673
+Memory: Retrieved 60 points, avg=961.6132963333333
+Disk: Retrieved 60 points, avg=23.947681583333335
+Network: Retrieved 60 points, avg=-0.7769068816666668
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:20:02.629363] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.735837546666668
+Memory: Retrieved 60 points, avg=944.20702645
+Disk: Retrieved 60 points, avg=23.947681499999998
+Network: Retrieved 60 points, avg=-7.1657212249999995
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b41acffbbb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b41accc5c70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b41ad016cf0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7b41ad017240>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.031676803333334
+Memory: Retrieved 60 points, avg=961.6132706666666
+Disk: Retrieved 60 points, avg=23.947681516666666
+Network: Retrieved 60 points, avg=-2.244507953333333
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.8672139866666666
+Memory: Retrieved 60 points, avg=961.6132646666666
+Disk: Retrieved 60 points, avg=23.947681266666667
+Network: Retrieved 60 points, avg=-1.1418666466666667
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:30:02.580519] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=7.1355597600000005
+Memory: Retrieved 60 points, avg=944.2070186666666
+Disk: Retrieved 60 points, avg=23.947681516666666
+Network: Retrieved 60 points, avg=-3.277732483333333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x728b3e0fbce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x728b3ddd1c70>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x728b3e122be0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x728b3e123130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.237814826666667
+Memory: Retrieved 60 points, avg=961.613293
+Disk: Retrieved 60 points, avg=23.947681316666667
+Network: Retrieved 60 points, avg=-3.725461656666667
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.9731710466666663
+Memory: Retrieved 60 points, avg=961.6132626666666
+Disk: Retrieved 60 points, avg=23.947681616666667
+Network: Retrieved 60 points, avg=-0.7481111916666666
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:40:02.468540] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=6.617505576666667
+Memory: Retrieved 60 points, avg=944.2070283333334
+Disk: Retrieved 60 points, avg=23.94768135
+Network: Retrieved 60 points, avg=-5.233653218333333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x73b9f9c03ce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x73b9f9a3dd90>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x73b9f9c26be0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x73b9f9c27130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.142971139999999
+Memory: Retrieved 60 points, avg=961.6132861666666
+Disk: Retrieved 60 points, avg=23.947681783333334
+Network: Retrieved 60 points, avg=-0.7437334183333333
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=3.8733693566666663
+Memory: Retrieved 60 points, avg=961.6132873333333
+Disk: Retrieved 60 points, avg=23.947681283333335
+Network: Retrieved 60 points, avg=-0.58146665
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 21:50:02.380651] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=6.417475816666666
+Memory: Retrieved 60 points, avg=944.2070514999999
+Disk: Retrieved 60 points, avg=23.947681333333332
+Network: Retrieved 60 points, avg=-10.94608705
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7088c8ee7ce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7088c8f1deb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7088c8f0abe0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7088c8f0b130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.297470193333334
+Memory: Retrieved 60 points, avg=961.6132845
+Disk: Retrieved 60 points, avg=23.947681333333332
+Network: Retrieved 60 points, avg=-0.4909334166666666
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=4.0268780799999995
+Memory: Retrieved 60 points, avg=961.6132668333333
+Disk: Retrieved 60 points, avg=23.947681699999997
+Network: Retrieved 60 points, avg=-0.745119845
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 22:00:02.390585] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.440169406666667
+Memory: Retrieved 60 points, avg=944.2070347833334
+Disk: Retrieved 60 points, avg=23.947681333333332
+Network: Retrieved 60 points, avg=-1.0475999233333333
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x75454790bce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x754547749eb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x754547732be0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x754547733130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=7.0904771166666665
+Memory: Retrieved 60 points, avg=961.6132799999999
+Disk: Retrieved 60 points, avg=23.94768141666667
+Network: Retrieved 60 points, avg=-0.39400016
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=36.27733256
+Memory: Retrieved 60 points, avg=961.6133076666666
+Disk: Retrieved 60 points, avg=23.94768135
+Network: Retrieved 60 points, avg=-0.7229063683333333
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[2025-04-20 22:10:02.274995] Logging system metrics...
+
+--- 127.0.0.1 ---
+Cpu: Retrieved 60 points, avg=4.522584456666666
+Memory: Retrieved 60 points, avg=944.2070539666668
+Disk: Retrieved 60 points, avg=23.947681133333333
+Network: Retrieved 60 points, avg=-2.2170749450000002
+
+--- 172.104.17.8 ---
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.cpu&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c7d0bbebce0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.ram&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c7d0bc21eb0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=disk_space.%2F&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c7d0bc0ebe0>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+172.104.17.8: Error fetching data: HTTPConnectionPool(host='172.104.17.8', port=19999): Max retries exceeded with url: /api/v1/data?chart=system.net&after=-60&format=json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7c7d0bc0f130>, 'Connection to 172.104.17.8 timed out. (connect timeout=5)'))
+
+--- 173.255.230.24 ---
+Cpu: Retrieved 60 points, avg=6.817705993333333
+Memory: Retrieved 60 points, avg=961.6132881666667
+Disk: Retrieved 60 points, avg=23.947681383333336
+Network: Retrieved 60 points, avg=-0.14040119499999995
+
+--- 66.228.34.180 ---
+Cpu: Retrieved 60 points, avg=4.1698089099999995
+Memory: Retrieved 60 points, avg=961.6132651666667
+Disk: Retrieved 60 points, avg=23.947681516666666
+Network: Retrieved 60 points, avg=-0.40388971166666665
+
+--- 66.175.210.204 ---
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+66.175.210.204: Error fetching data: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))

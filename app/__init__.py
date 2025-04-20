@@ -18,21 +18,22 @@ oauth = OAuth()
 @login_manager.user_loader
 def load_user(user_id):
     """Load user by ID."""
-    return User.query.get(int(user_id))
+    return db.session.get(User, int(user_id))
 
-def create_app():
+def create_app(config_override=None):
     """Create and configure the Flask app."""
     app = Flask(__name__)
     app.config.from_object(Config)
-    
-    # Initialize extensions
+
+    if config_override:
+        app.config.update(config_override) 
+
     login_manager.init_app(app)
     oauth.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
     init_admin(app)
-    
-    # Configure OAuth provider
+
     oauth.register(
         name='google',
         client_id=app.config['GOOGLE_CLIENT_ID'],
@@ -42,12 +43,11 @@ def create_app():
         server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',
         client_kwargs={'scope': 'openid email profile'}
     )
-    
+
     with app.app_context():
         db.create_all()
-    
-    # Register blueprints
+
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
-    
+
     return app

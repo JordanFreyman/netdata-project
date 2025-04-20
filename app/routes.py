@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta, timezone
 from functools import wraps
 from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required, current_user
@@ -64,8 +65,8 @@ def get_metric_data(metric_type):
     }[metric_type]
 
     range_param = request.args.get('range', '1h')
-    now = datetime.utcnow()
-
+    now = datetime.now(timezone.utc)
+    
     if range_param == '1h':
         start_time = now - timedelta(hours=1)
     elif range_param == '24h':
