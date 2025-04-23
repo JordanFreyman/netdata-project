@@ -12964,3 +12964,31 @@ Cpu: Retrieved 60 points, avg=5.553200919999999
 Memory: Retrieved 60 points, avg=961.613256
 Disk: Retrieved 60 points, avg=24.035160016666666
 Network: Retrieved 60 points, avg=-4.9206925
+Traceback (most recent call last):
+  File "/root/cop4521-flask/log_metrics.py", line 6, in <module>
+    from app.logger import log_metrics
+  File "/root/lynis/cop4521-flask/app/logger.py", line 54
+    print(f"⚠️ {ip} - 'used' not found in dimensions for {metric_name}. Got: {dim_names}")
+    ^^^^^
+IndentationError: expected an indented block after 'if' statement on line 53
+[2025-04-23 16:40:02.204149+00:00] Logging system metrics...
+
+--- 127.0.0.1 ---
+
+--- 172.104.17.8 ---
+
+--- 173.255.230.24 ---
+
+--- 66.228.34.180 ---
+
+--- 66.175.210.204 ---
+66.175.210.204 - cpu dimensions: []
+Cpu: Retrieved 60 points, avg=5.057969676666667
+66.175.210.204 - memory dimensions: []
+66.175.210.204 - 'used' not found in dimensions for memory. Got: []
+Memory: Retrieved 60 points, avg=None
+66.175.210.204 - disk dimensions: []
+66.175.210.204 - 'used' not found in dimensions for disk. Got: []
+Disk: Retrieved 60 points, avg=None
+66.175.210.204 - network dimensions: []
+Network: Retrieved 60 points, avg=10.775290928333334
