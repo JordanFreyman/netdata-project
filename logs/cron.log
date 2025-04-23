@@ -12992,3 +12992,60 @@ Memory: Retrieved 60 points, avg=None
 Disk: Retrieved 60 points, avg=None
 66.175.210.204 - network dimensions: []
 Network: Retrieved 60 points, avg=10.775290928333334
+[2025-04-23 16:50:02.082374+00:00] Logging system metrics...
+
+--- 127.0.0.1 ---
+
+--- 172.104.17.8 ---
+
+--- 173.255.230.24 ---
+
+--- 66.228.34.180 ---
+
+--- 66.175.210.204 ---
+66.175.210.204 - cpu dimensions: ['guest_nice', 'guest', 'steal', 'softirq', 'irq', 'user', 'system', 'nice', 'iowait']
+66.175.210.204 - Cpu: 4.92 % (from 60 points)
+66.175.210.204 - memory dimensions: ['free', 'used', 'cached', 'buffers']
+66.175.210.204 - Memory: 368.72 MiB (from 60 points)
+66.175.210.204 - disk dimensions: ['avail', 'used', 'reserved for root']
+66.175.210.204 - Disk: 8.86 GiB (from 60 points)
+66.175.210.204 - network dimensions: ['received', 'sent']
+66.175.210.204 - Network: -4.89 KiB/s (from 60 points)
+[2025-04-23 17:00:01.934999+00:00] Logging system metrics...
+
+--- 127.0.0.1 ---
+
+--- 172.104.17.8 ---
+
+--- 173.255.230.24 ---
+
+--- 66.228.34.180 ---
+
+--- 66.175.210.204 ---
+66.175.210.204 - cpu dimensions: ['guest_nice', 'guest', 'steal', 'softirq', 'irq', 'user', 'system', 'nice', 'iowait']
+66.175.210.204 - Cpu: 4.77 % (from 60 points)
+66.175.210.204 - memory dimensions: ['free', 'used', 'cached', 'buffers']
+66.175.210.204 - Memory: 372.60 MiB (from 60 points)
+66.175.210.204 - disk dimensions: ['avail', 'used', 'reserved for root']
+66.175.210.204 - Disk: 8.86 GiB (from 60 points)
+66.175.210.204 - network dimensions: ['received', 'sent']
+66.175.210.204 - Network: 10.98 KiB/s (from 60 points)
+[2025-04-23 17:10:01.974692+00:00] Logging system metrics...
+
+--- 127.0.0.1 ---
+
+--- 172.104.17.8 ---
+
+--- 173.255.230.24 ---
+
+--- 66.228.34.180 ---
+
+--- 66.175.210.204 ---
+66.175.210.204 - cpu dimensions: ['guest_nice', 'guest', 'steal', 'softirq', 'irq', 'user', 'system', 'nice', 'iowait']
+66.175.210.204 - Cpu: 4.85 % (from 60 points)
+66.175.210.204 - memory dimensions: ['free', 'used', 'cached', 'buffers']
+66.175.210.204 - Memory: 372.18 MiB (from 60 points)
+66.175.210.204 - disk dimensions: ['avail', 'used', 'reserved for root']
+66.175.210.204 - Disk: 8.86 GiB (from 60 points)
+66.175.210.204 - network dimensions: ['received', 'sent']
+66.175.210.204 - Network: 11.59 KiB/s (from 60 points)

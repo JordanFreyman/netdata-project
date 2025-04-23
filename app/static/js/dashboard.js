@@ -58,12 +58,18 @@ function createOrUpdateMachineCharts(machine, metrics, range) {
             charts[`${key}-${machine}`].data.datasets[0].data = values;
             charts[`${key}-${machine}`].update();
         } else {
+            const unit = {
+                 cpu: '%',
+                 memory: 'MiB',
+                 disk: 'GiB',
+                 network: 'KiB/s'
+            }[key] || '';
             charts[`${key}-${machine}`] = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: label,
+                        label: `${label} (${unit})`,
                         data: values,
                         borderWidth: 2,
                         borderColor: 'rgba(75, 192, 192, 1)',
@@ -99,13 +105,11 @@ function fetchAndUpdateCharts() {
         fetch(`/api/metrics/${key}?range=${selectedRange}`)
             .then(response => response.json())
             .then(data => {
-                // ✅ Skip if the response is not an object (e.g., if it's an array or invalid)
                 if (typeof data !== 'object' || Array.isArray(data)) {
                     console.error(`Invalid data structure for ${key}:`, data);
                     return;
                 }
 
-                // Merge the data into allData
                 for (const machine of Object.keys(data)) {
                     if (!allData[machine]) allData[machine] = {};
                     allData[machine][key] = data[machine];

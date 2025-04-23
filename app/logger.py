@@ -30,46 +30,59 @@ def log_metrics():
         print(f"\n--- {ip} ---")
         metrics = {}
 
-    for metric_name, chart in charts.items():
-        try:
-            encoded_chart = urllib.parse.quote(chart)
-            url = f"http://{ip}:19999/api/v1/data"
-            params = {
-                "chart": encoded_chart,
-                "after": -60,
-                "format": "json"
-            }
-            response = requests.get(url, params=params, timeout=5)
-            response.raise_for_status()
+        for metric_name, chart in charts.items():
+            try:
+                encoded_chart = urllib.parse.quote(chart)
+                url = f"http://{ip}:19999/api/v1/data"
+                params = {
+                    "chart": encoded_chart,
+                    "after": -60,
+                    "format": "json",
+                    "options": "absolute,dimension_names"
+                }
+                response = requests.get(url, params=params, timeout=5)
+                response.raise_for_status()
 
-            json_data = response.json()
-            rows = json_data.get("data", [])
-            dim_names = json_data.get("labels", [])[1:]
+                json_data = response.json()
+                rows = json_data.get("data", [])
+                dim_names = json_data.get("labels", [])[1:]
 
-            print(f"{ip} - {metric_name} dimensions: {dim_names}")
+                print(f"{ip} - {metric_name} dimensions: {dim_names}")
 
-            if metric_name in ["memory", "disk"]:
-                if "used" in dim_names:
-                    used_index = dim_names.index("used")
-                    values = [
-                        row[used_index + 1]
-                        for row in rows
-                        if len(row) > used_index + 1
-                    ]
-                    avg = sum(values) / len(values) if values else None
+                if metric_name in ["memory", "disk"]:
+                    if "used" in dim_names:
+                        used_index = dim_names.index("used")
+                        values = [
+                            row[used_index + 1]
+                            for row in rows
+                            if len(row) > used_index + 1
+                        ]
+                        avg = sum(values) / len(values) if values else None
+                    else:
+                        print(f"{ip} - 'used' not found in dimensions for {metric_name}. Got: {dim_names}")
+                        avg = None
                 else:
-                    print(f"{ip} - 'used' not found in dimensions for {metric_name}. Got: {dim_names}")
-                    avg = None
-            else:
-                values = [sum(row[1:]) for row in rows if len(row) > 1]
-                avg = sum(values) / len(values) if values else None
+                    values = [sum(row[1:]) for row in rows if len(row) > 1]
+                    avg = sum(values) / len(values) if values else None
 
-            print(f"{metric_name.capitalize()}: Retrieved {len(rows)} points, avg={avg}")
-            metrics[metric_name] = avg
+                unit = {
+                    "cpu": "%",
+                    "memory": "MiB",
+                    "disk": "GiB",
+                    "network": "KiB/s"
+                }.get(metric_name, "")
 
-        except requests.RequestException as err:
-            print(f"{ip}: Error fetching {metric_name} data: {err}")
-            metrics[metric_name] = None
+                print(f"{ip} - {metric_name.capitalize()}: {avg:.2f} {unit} (from {len(rows)} points)")
+
+                metrics[metric_name] = avg
+
+            except requests.RequestException as err:
+                print(f"{ip}: Error fetching {metric_name} data: {err}")
+                metrics[metric_name] = None
+
+        if all(value is None for value in metrics.values()):
+            print(f"{ip} No valid metrics fetched — skipping logging.")
+            continue
 
         log = MetricLogs(
             machine_name=ip,
@@ -81,6 +94,7 @@ def log_metrics():
         db.session.add(log)
 
     db.session.commit()
+
 
 if __name__ == "__main__":
     from app import create_app
