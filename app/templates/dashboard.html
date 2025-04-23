@@ -2,6 +2,19 @@
 {% block content %}
 <div class="dashboard-container">
     <h1 class="dashboard-title">Dashboard Overview</h1>
+
+
+    {% if unreachable %}
+    <div class="alert alert-warning" role="alert" style="margin-bottom: 1rem;">
+        ⚠️Unable to fetch data from the following machines:
+        <ul>
+            {% for machine in unreachable %}
+            <li>{{ machine }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
 <div style="margin-bottom: 1rem;">
   <label for="rangeSelect">Select time range: </label>
   <select id="rangeSelect">

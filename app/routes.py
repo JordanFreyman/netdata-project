@@ -34,8 +34,37 @@ def index():
 @main_bp.route('/dashboard')
 @login_required
 def dashboard():
-    """Render the user dashboard."""
-    return render_template('dashboard.html')
+    """Render the user dashboard with info about unreachable machines."""
+    from sqlalchemy import func
+
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=1)
+    subquery = (
+        db.session.query(
+            MetricLogs.machine_name,
+            func.max(MetricLogs.timestamp).label("latest")
+        )
+        .filter(MetricLogs.timestamp >= cutoff)
+        .group_by(MetricLogs.machine_name)
+        .subquery()
+    )
+
+    recent_logs = (
+        db.session.query(MetricLogs)
+        .join(subquery, db.and_(
+            MetricLogs.machine_name == subquery.c.machine_name,
+            MetricLogs.timestamp == subquery.c.latest
+        ))
+        .all()
+    )
+
+    unreachable = [
+        log.machine_name for log in recent_logs
+        if all(getattr(log, field) is None for field in [
+            'cpu_usage', 'memory_usage', 'disk_usage', 'network_usage'
+        ])
+    ]
+
+    return render_template('dashboard.html', unreachable=unreachable)
 
 
 @main_bp.route('/unauthorized')

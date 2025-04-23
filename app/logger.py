@@ -1,6 +1,6 @@
 """Log metrics from each cluster machine by querying Netdata API endpoints."""
 
-from datetime import datetime
+from datetime import datetime, timezone
 import urllib.parse
 import requests
 
@@ -9,7 +9,7 @@ from app.models import db, MetricLogs
 
 def log_metrics():
     """Fetch and log CPU, memory, disk, and network usage from cluster nodes."""
-    print(f"[{datetime.utcnow()}] Logging system metrics...")
+    print(f"[{datetime.now(timezone.utc)}] Logging system metrics...")
 
     cluster_ips = [
         "127.0.0.1",
@@ -44,9 +44,15 @@ def log_metrics():
 
                 json_data = response.json()
                 rows = json_data.get("data", [])
+                dim_names = json_data.get("dimension_names", [])
 
-                values = [sum(row[1:]) for row in rows if len(row) > 1]
-                avg = sum(values) / len(values) if values else None
+                if metric_name in ["memory", "disk"] and "used" in dim_names:
+                    used_index = dim_names.index("used")
+                    values = [row[used_index + 1] for row in rows if len(row) > used_index + 1]
+                    avg = sum(values) / len(values) if values else None
+                else:
+                    values = [sum(row[1:]) for row in rows if len(row) > 1]
+                    avg = sum(values) / len(values) if values else None
 
                 print(f"{metric_name.capitalize()}: Retrieved {len(rows)} points, avg={avg}")
                 metrics[metric_name] = avg
@@ -64,3 +70,9 @@ def log_metrics():
         db.session.add(log)
 
     db.session.commit()
+
+if __name__ == "__main__":
+    from app import create_app
+    app = create_app()
+    with app.app_context():
+        log_metrics()
