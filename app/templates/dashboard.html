@@ -6,7 +6,7 @@
 
     {% if unreachable %}
     <div class="alert alert-warning" role="alert" style="margin-bottom: 1rem;">
-        ⚠️Unable to fetch data from the following machines:
+        Unable to fetch data from the following machines:
         <ul>
             {% for machine in unreachable %}
             <li>{{ machine }}</li>
@@ -16,14 +16,17 @@
     {% endif %}
 
 <div style="margin-bottom: 1rem;">
-  <label for="rangeSelect">Select time range: </label>
-  <select id="rangeSelect">
+  {% if current_user.type == 'Admin' %}
+    <label for="rangeSelect">Select time range: </label>
+    <select id="rangeSelect">
       <option value="1h">Last 1 Hour</option>
       <option value="24h">Last 24 Hours</option>
       <option value="7d">Last 7 Days</option>
-  </select>
+    </select>
+  {% else %}
+    <input type="hidden" id="rangeSelect" value="1h">
+  {% endif %}
 </div>
-
 <div id="chartsContainer" class="charts-container">
 
 </div>
