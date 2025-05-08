@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Resource Radar
 
 ## Overview
